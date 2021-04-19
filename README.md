@@ -44,6 +44,7 @@ dst = np.float32([[300,height], [300,0], [900,0], [900,height]])
 ```
 
 <img src="warped_straight_lines.jpg" height="300" width="450">
+
 #### 4. Identification of lane-line pixels and fit the positions with a polynomial
 
 After the prespective transform I did worte a lane finding algorithm using a histogram approach. Along with it I also identified the lane pixels and fit the lanes with a 2nd order polynomial kinda like this which are shown in green color:
