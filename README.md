@@ -1,6 +1,6 @@
 # Advanced-Lane-Detection
 
 # Result
-[![RESULT](Output.jpg)](Output.mp4)
 
+[![Watch the video](Output.jpg)](https://youtu.be/T-D1KVIuvjA)
 
