@@ -18,20 +18,20 @@ The goals / steps of this project are the following:
 To demonstrate this step, I will describe how I applied the distortion correction to one of the test images like this one:
 <img src="before_calibration1.jpg" height="300" width="450">
 
-To correct the image and undistort the effects of camera, first the distortion matrix is calculate by using the inbuilt function calibratecamera. This function gives the calibration matrix, which is applied on the distorted image using undistort function. The output after applying this step is as shown.
+To correct the image and undistort the effects of camera, first the distortion matrix is calculated by using the inbuilt function 'calibratecamera'. This function gives the calibration matrix, which is applied on the distorted image using undistort function. The output after applying this step is as shown.
 
 
 <img src="calibration1.jpg" height="300" width="450">
 
 #### 2. Applied color transforms and directional gradient thresholding to create a thresholded binary image along with an example of a binary image result.
 
-I used a combination of color and gradient thresholds to generate a binary image  denoted by abs_sobel_thresh, mag_thresh, dir_threshold for gradient thresholding and later applying color thresholding. The input was converted from RGB color space to HLS color space. Here's an example of my output after thresholding.
+I used a combination of color and gradient thresholds to generate a binary image  denoted by abs_sobel_thresh, mag_thresh, dir_threshold for gradient thresholding and later applying color thresholding. The input was converted from RGB color space to HLS color space. Here's an example of my output after combined thresholding.
 
 <img src="Binary_combo.jpg" height="300" width="450">
 
 #### 3. Perspective transform with an example of a transformed image.
 
-  The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
+The `warper()` function takes as inputs an image (`img`), as well as source (`src`) and destination (`dst`) points.  I chose the hardcode the source and destination points in the following manner:
 
 ```python
 x1, y1 = 220,height
@@ -43,20 +43,10 @@ src=np.float32([[x1,y1], [x2,y2], [x3,y3], [x4,y4]])
 dst = np.float32([[300,height], [300,0], [900,0], [900,height]])
 ```
 
-This resulted in the following source and destination points:
-
-| Source        | Destination   | 
-|:-------------:|:-------------:| 
-| 585, 460      | 320, 0        | 
-| 203, 720      | 320, 720      |
-| 1127, 720     | 960, 720      |
-| 695, 460      | 960, 0        |
-
-
 <img src="warped_straight_lines.jpg" height="300" width="450">
 #### 4. Identification of lane-line pixels and fit the positions with a polynomial
 
-After the prespective transform I did worte a lane finding algorithm using a histogram approach. Along with it I also identified the lane pixels and fit my lane lines with a 2nd order polynomial kinda like this which are shown in green color:
+After the prespective transform I did worte a lane finding algorithm using a histogram approach. Along with it I also identified the lane pixels and fit the lanes with a 2nd order polynomial kinda like this which are shown in green color:
 
 <img src="Color_fit_lines.jpg" height="300" width="450">
 
