@@ -1,5 +1,6 @@
 # Advanced-Lane-Detection
 
-# Result
+# Result 
+(Click the below thumbnail for complete video)
 
-[![RESULT](Thumbnail.png width=50)](https://youtu.be/lEwCjSDabyE)
+[![RESULT](Thumbnail.png)](https://youtu.be/lEwCjSDabyE)
