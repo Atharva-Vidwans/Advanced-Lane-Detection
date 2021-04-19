@@ -2,6 +2,4 @@
 
 # Result
 
-
-
-![RESULT](https://youtu.be/lEwCjSDabyE)
+[![](Thumbnail.png)](https://youtu.be/lEwCjSDabyE)
