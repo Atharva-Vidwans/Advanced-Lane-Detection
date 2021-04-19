@@ -2,4 +2,4 @@
 
 # Result
 
-[![](Thumbnail.png)](https://youtu.be/lEwCjSDabyE)
+[![RESULT](Thumbnail.png width=50)](https://youtu.be/lEwCjSDabyE)
