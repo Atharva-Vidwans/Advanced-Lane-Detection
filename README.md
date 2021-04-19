@@ -53,17 +53,17 @@ This resulted in the following source and destination points:
 | 695, 460      | 960, 0        |
 
 
-[alt text]: ".\output_images\warped_straight_lines.jpg" "Perspective Transform"
+<img src="warped_straight_lines.jpg" height="300" width="450">
+#### 4. Identification of lane-line pixels and fit the positions with a polynomial
 
-#### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
+After the prespective transform I did worte a lane finding algorithm using a histogram approach. Along with it I also identified the lane pixels and fit my lane lines with a 2nd order polynomial kinda like this which are shown in green color:
 
-Then after the prespective transform I did worte a lane finding algorithm using a histogram approach. Along with it I also identified the lane pixels and fit my lane lines with a 2nd order polynomial kinda like this which are shown in green color:
+<img src="Color_fit_lines.jpg" height="300" width="450">
 
-[alt text]: ".\output_images\Color_fit_lines.jpg" "Lane pixel finding"
 
-#### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
+#### 5. Calculation of the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-After the lane finding step I wrote a algorithm for calculating the radius of curvature. It was done using a formula given in the user defined function of fit polynomial. By using the curvature formula I was able to calcuate the radius of curvature. The centre curvature of the centre of road was just the average of right and left lines. Furthermore, the amount of offset was found out by calcuating the centre of the lane and the centre of image. These two quantities were subtracted and the result was multiplied with the ratio of pixel to meter conversion given by 'xm_per_pix'. Thus giving us the Curvature value and also the offset value.  
+After the lane finding step I wrote a function for calculating the radius of curvature. It was done using a formula given in the user defined function of fit polynomial. By using the curvature formula I was able to calcuate the radius of curvature. The centre curvature of the centre of road was just the average of right and left lines. Furthermore, the amount of offset was found out by calcuating the centre of the lane and the centre of image. These two quantities were subtracted and the result was multiplied with the ratio of pixel to metre conversion given by 'xm_per_pix'. Thus giving us the Curvature value and also the offset value.  
 
 #### 6. Result 
 #### (Click the below thumbnail for complete video)
